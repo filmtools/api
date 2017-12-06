@@ -1,0 +1,24 @@
+{
+
+	"autoload": {
+		"psr-4": {
+			"FilmTools\\HttpApi\\": "src/"
+		}
+	},
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+
+  "require": {
+    "slim/slim": "^3.9",
+		"filmtools/ndeviation": "^2.0"
+  },
+
+  "require-dev": {
+    "phpunit/phpunit": "^5.0|^6.0"
+  }
+
+
+}
