@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7098fcfd6a58a82ec83dc4b787147270",
+    "content-hash": "3e0140e8c1d6d1d3236b4ff7273d0e05",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -36,6 +36,69 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "filmtools/developing",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filmtools/developing.git",
+                "reference": "c21cdb7c083b9cd7852f8ebf618eefcce14ac0cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filmtools/developing/zipball/c21cdb7c083b9cd7852f8ebf618eefcce14ac0cf",
+                "reference": "c21cdb7c083b9cd7852f8ebf618eefcce14ac0cf",
+                "shasum": ""
+            },
+            "require": {
+                "filmtools/exposureseries": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FilmTools\\Developing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC BY-SA 3.0"
+            ],
+            "description": "PHP classes for film developings",
+            "time": "2017-12-07T08:44:08+00:00"
+        },
+        {
+            "name": "filmtools/exposureseries",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filmtools/exposureseries.git",
+                "reference": "f549cc95c44e7d2c826ea047dd4b2ceb3f97b158"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filmtools/exposureseries/zipball/f549cc95c44e7d2c826ea047dd4b2ceb3f97b158",
+                "reference": "f549cc95c44e7d2c826ea047dd4b2ceb3f97b158",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FilmTools\\ExposureSeries\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC BY-SA 3.0"
+            ],
+            "description": "PHP interfaces and traits for exposure 'zones' and film densities",
+            "time": "2017-12-06T21:29:36+00:00"
         },
         {
             "name": "filmtools/ndeviation",
