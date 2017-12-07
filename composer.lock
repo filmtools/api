@@ -39,16 +39,16 @@
         },
         {
             "name": "filmtools/developing",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filmtools/developing.git",
-                "reference": "c21cdb7c083b9cd7852f8ebf618eefcce14ac0cf"
+                "reference": "4198cc5ebf55683cbce7d5837c44bd69269094fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filmtools/developing/zipball/c21cdb7c083b9cd7852f8ebf618eefcce14ac0cf",
-                "reference": "c21cdb7c083b9cd7852f8ebf618eefcce14ac0cf",
+                "url": "https://api.github.com/repos/filmtools/developing/zipball/4198cc5ebf55683cbce7d5837c44bd69269094fd",
+                "reference": "4198cc5ebf55683cbce7d5837c44bd69269094fd",
                 "shasum": ""
             },
             "require": {
@@ -68,7 +68,7 @@
                 "CC BY-SA 3.0"
             ],
             "description": "PHP classes for film developings",
-            "time": "2017-12-07T08:44:08+00:00"
+            "time": "2017-12-07T09:17:05+00:00"
         },
         {
             "name": "filmtools/exposureseries",
