@@ -34,19 +34,11 @@ class DevelopingController
     {
         $data = $request->getParsedBody();
 
-        $n_calculator = new NDeviation( 8, 1.29);
-        $N = $n_calculator( $data['zones'], $data['densities'] );
-
+        $n_calculator     = new NDeviation( 8, 1.29);
         $speed_calculator = new NDeviation( 1.5, 0.17);
-        $offset = $speed_calculator( $data['zones'], $data['densities'] );
 
         $factory = $this->developing_factory;
-        $developing = $factory();
-
-        $developing->setOffset( $offset );
-        $developing->setN( $N );
-        $developing->setZones( $data['zones'] );
-        $developing->setDensities( $data['densities'] );
+        $developing = $factory($data['zones'], $data['densities'], $n_calculator, $speed_calculator);
 
         return $response->withJson( $developing );
     }
