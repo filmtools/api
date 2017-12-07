@@ -7,6 +7,6 @@ class Router
 {
     public function __construct( App $app )
     {
-        $app->post('/developing', 'NDeviation.Developing');
+        $app->post('/developing', 'NDeviation.Developing.Controller');
     }
 }
