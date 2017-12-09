@@ -5,9 +5,15 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 use FilmTools\NDeviation\NDeviation;
+use Pimple\Container;
 
 class DevelopingController
 {
+
+    /**
+     * @var Container
+     */
+    public $dic;
 
     /**
      * @var Callable
@@ -18,9 +24,10 @@ class DevelopingController
     /**
      * @param callable $developing_factory
      */
-    public function __construct( callable $developing_factory )
+    public function __construct( Container $dic, callable $developing_factory )
     {
         $this->developing_factory = $developing_factory;
+        $this->dic = $dic;
     }
 
 

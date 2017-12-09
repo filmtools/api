@@ -10,17 +10,17 @@ class ServiceProvider implements ServiceProviderInterface
     public function register(Container $dic)
     {
 
-        $dic['NDeviation.Developing.Factory'] = $dic->protect(
+        $dic['Developing.Factory'] = $dic->protect(
             function($zones, $densities, $n_calculator, $speed_calculator) {
                 return new JsonDeveloping( $zones, $densities, $n_calculator, $speed_calculator );
             }
         );
 
 
-        $dic['NDeviation.Developing.Controller'] = function( $dic )
+        $dic['Developing.Controller'] = function( $dic )
         {
-            $factory = $dic['NDeviation.Developing.Factory'];
-            return new DevelopingController( $factory );
+            $factory = $dic['Developing.Factory'];
+            return new DevelopingController( $dic, $factory );
         };
 
     }
