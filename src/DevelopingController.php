@@ -15,6 +15,7 @@ class DevelopingController
      */
     public $dic;
 
+
     /**
      * @var Callable
      */
@@ -22,12 +23,27 @@ class DevelopingController
 
 
     /**
-     * @param callable $developing_factory
+     * @var Callable
      */
-    public function __construct( Container $dic, callable $developing_factory )
+    public $n_calculator;
+
+
+    /**
+     * @var Callable
+     */
+    public $speed_calculator;
+
+
+    /**
+     * @param callable $developing_factory
+     * @param callable $n_calculator
+     * @param callable $speed_calculator
+     */
+    public function __construct( callable $developing_factory, callable $n_calculator, callable $speed_calculator )
     {
         $this->developing_factory = $developing_factory;
-        $this->dic = $dic;
+        $this->n_calculator = $n_calculator;
+        $this->speed_calculator = $speed_calculator;
     }
 
 
@@ -41,10 +57,10 @@ class DevelopingController
     {
         $data = $request->getParsedBody();
 
-        $n_calculator     = new NDeviation( 8, 1.29);
-        $speed_calculator = new NDeviation( 1.5, 0.17);
+        $n_calculator     = $this->n_calculator;
+        $speed_calculator = $this->speed_calculator;
+        $factory          = $this->developing_factory;
 
-        $factory = $this->developing_factory;
         $developing = $factory($data['zones'], $data['densities'], $n_calculator, $speed_calculator);
 
         return $response->withJson( $developing );
