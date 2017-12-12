@@ -24,7 +24,7 @@ Creates a new developing instance on the server, and returns a Location header t
 
 **Request body:**
 
-```json
+```
 {
   film:          string,
   developer:     string,
