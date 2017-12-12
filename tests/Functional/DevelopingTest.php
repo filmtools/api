@@ -28,6 +28,8 @@ class DevelopingTest extends BaseTestCase
         $this->assertArrayHasKey('zones', $data);
         $this->assertArrayHasKey('densities', $data);
         $this->assertArrayHasKey('offset', $data);
+        $this->assertArrayHasKey('gamma', $data);
+        $this->assertArrayHasKey('beta', $data);
 
         #echo $response->getBody();
     }
