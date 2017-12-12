@@ -11,13 +11,38 @@ class ServiceProvider implements ServiceProviderInterface
     public function register(Container $dic)
     {
 
+
+        $dic['NDeviation.Zone'] = function($dic) {
+            return 8;
+        };
+
+        $dic['NDeviation.Density'] = function($dic) {
+            return 1.29;
+        };
+
         $dic['NDeviation.Calculator'] = function($dic) {
-            return new NDeviation( 8, 1.29 );
+            $zone = $dic['NDeviation.Zone'];
+            $density = $dic['NDeviation.Density'];
+            return new NDeviation( $zone, $density );
+        };
+
+
+
+        $dic['SpeedOffset.Zone'] = function($dic) {
+            return 1.5;
+        };
+
+        $dic['SpeedOffset.Density'] = function($dic) {
+            return 0.17;
         };
 
         $dic['SpeedOffset.Calculator'] = function($dic) {
-            return new NDeviation( 1.5, 0.17 );
+            $zone = $dic['SpeedOffset.Zone'];
+            $density = $dic['SpeedOffset.Density'];
+            return new NDeviation( $zone, $density );
         };
+
+
 
         $dic['Developing.Factory'] = $dic->protect(
             function($zones, $densities, $n_calculator, $speed_calculator) {
