@@ -50,7 +50,7 @@ Returns the JSON representation of the given developing, including all calculate
 
 **Response body:**
 
-```json
+```
 {
   film:          string,
   developer:     string,
@@ -73,7 +73,7 @@ Creates a new test suite on the server, and returns a Location header to the res
 
 **Request body:**
 
-```json
+```
 {
   film:      string,
   developer: string,
@@ -107,7 +107,7 @@ Location: /testsuites/42
 
 **Response body:**
 
-```json
+```
 {
   developer:   string,
   film:        string,
@@ -122,7 +122,7 @@ Returns an array with all JSON representations of the developings belonging to t
 
 **Response body:**
 
-```json
+```
 [
   {
     exposureIndex: int,
@@ -144,8 +144,7 @@ Returns an array with all JSON representations of the developings belonging to t
     gamma:         0.55,    
     offset:        -0.25
   },
-  
-  /* ... */
+  ... 
 ]
 ```
 
